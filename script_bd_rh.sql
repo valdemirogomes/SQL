@@ -1,6 +1,11 @@
-create database rh;
+create database db_rh;
 
-use rh;
+use db_rh;
+
+/*
+drop database rh;
+drop table funcionario;
+*/
 
 create table funcionario (
 	id_funcionario int auto_increment ,
@@ -17,13 +22,15 @@ insert into funcionario (matricula, funcao, setor, salario) values (14123, 'Deve
 insert into funcionario (matricula, funcao, setor, salario) values (15, 'Developer Junior', 'TI' , 3.000);
 insert into funcionario (matricula, funcao, setor, salario) values (16, 'Developer FullStack Junior', 'TI' , 2.000);
 
-drop table funcionario;
-
 select * from funcionario;
 
 select * from funcionario where salario > 2.000;
 
 select * from funcionario where salario < 2.000;
+
+update funcionario 
+set matricula = 15
+where id_funcionario = 2;
 
 update funcionario 
 set matricula = 13
@@ -32,3 +39,8 @@ where id_funcionario = 3;
 update funcionario 
 set matricula = 14
 where id_funcionario = 4;
+
+
+
+
+    
