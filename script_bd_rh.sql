@@ -1,44 +1,36 @@
 create database db_rh;
-
+drop database db_RH;
 use db_rh;
 
-/*
-drop database rh;
-drop table funcionario;
-*/
-
-create table funcionario (
-	id_funcionario int auto_increment ,
+create table tb_funcionario (
+	id_tbfuncionario int auto_increment primary key,
     matricula int not null unique,
     funcao varchar(30),
     setor varchar(30),
-    salario double,
-    primary key(id_funcionario)
+    salario double
 );
 
-insert into funcionario (matricula, funcao, setor, salario) values (12, 'Developer', 'TI' , 6.000);
-insert into funcionario (matricula, funcao, setor, salario) values (137896, 'Developer Pleno', 'TI' , 7.000);
-insert into funcionario (matricula, funcao, setor, salario) values (14123, 'Developer FullStack Pleno', 'TI' , 10.000);
-insert into funcionario (matricula, funcao, setor, salario) values (15, 'Developer Junior', 'TI' , 3.000);
-insert into funcionario (matricula, funcao, setor, salario) values (16, 'Developer FullStack Junior', 'TI' , 2.000);
+insert into tb_funcionario (matricula, funcao, setor, salario) values (8987675, 'Developer', 'TI' , 6000);
+insert into tb_funcionario (matricula, funcao, setor, salario) values (2454345, 'Developer Pleno', 'TI' , 7.000);
+insert into tb_funcionario (matricula, funcao, setor, salario) values (9876567, 'Developer FullStack Pleno', 'TI' , 10.000);
+insert into tb_funcionario (matricula, funcao, setor, salario) values (1122212, 'Developer Junior', 'TI' , 3.000);
+insert into tb_funcionario (matricula, funcao, setor, salario) values (4432090, 'Developer FullStack Junior', 'TI' , 2.000);
 
-select * from funcionario;
+select * from tb_funcionario;
 
-select * from funcionario where salario > 2.000;
+select * from tb_funcionario where salario > 2000;
 
-select * from funcionario where salario < 2.000;
+select * from tb_funcionario where salario < 2000;
 
-update funcionario 
-set matricula = 15
-where id_funcionario = 2;
+update tb_funcionario 
+set salario = 2000
+where matricula = 4432090;
 
-update funcionario 
-set matricula = 13
-where id_funcionario = 3;
+update tb_funcionario 
+set salario = 3000
+where matricula = 1122212;
 
-update funcionario 
-set matricula = 14
-where id_funcionario = 4;
+
 
 
 
