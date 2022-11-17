@@ -4,10 +4,10 @@ use db_rh;
 
 create table tb_funcionario (
 	id_tbfuncionario int auto_increment primary key,
-    matricula int not null unique,
-    funcao varchar(30),
-    setor varchar(30),
-    salario double
+    	matricula int not null unique,
+    	funcao varchar(30),
+    	setor varchar(30),
+    	salario double
 );
 
 insert into tb_funcionario (matricula, funcao, setor, salario) values (8987675, 'Developer', 'TI' , 6000);
