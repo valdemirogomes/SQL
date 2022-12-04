@@ -3,10 +3,10 @@ use db_escola;
 
 create table tb_aluno (
 	id_tbaluno int auto_increment primary key,
-    matricula int not null unique,
-    nome_aluno varchar(50),
-    data_nascimento date,
-    nota decimal(5,2)
+    	matricula int not null unique,
+    	nome_aluno varchar(50),
+    	data_nascimento date,
+    	nota decimal(5,2)
 );
 
 insert into tb_aluno (matricula, nome_aluno, data_nascimento, nota) values (123, "Vânia Gomes", "1984-02-16", 6.0);
